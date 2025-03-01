@@ -1,4 +1,4 @@
-# Resolução de Problema com Operações Matemáticas
+# The Count Down Problem
 
 ## Descrição do Projeto
 Este projeto implementa um algoritmo que encontra a melhor combinação de operações matemáticas para aproximar um número-alvo a partir de um conjunto de números dados. O código utiliza **força bruta** combinada com **backtracking** para explorar todas as possibilidades e selecionar a melhor solução.
