@@ -1,4 +1,4 @@
-# The Count Down Problem
+# Resolução de Problema com Operações Matemáticas
 
 ## Descrição do Projeto
 Este projeto implementa um algoritmo que encontra a melhor combinação de operações matemáticas para aproximar um número-alvo a partir de um conjunto de números dados. O código utiliza **força bruta** combinada com **backtracking** para explorar todas as possibilidades e selecionar a melhor solução.
@@ -32,8 +32,8 @@ Função recursiva que busca a melhor combinação de operações para aproximar
 #### `void solve(int numbers[], int count, int target)`
 Inicia a busca pela melhor solução e exibe os resultados.
 
-## Compilação e Execução
-Para compilar o código utilizando `gcc`, execute:
+## Compilação e Execução Linux
+Para compilar o código é preciso ter o `gcc` instalado e executar os seguintes comandos:
 ```sh
 gcc main.c operacoes.c -o programa
 ```
