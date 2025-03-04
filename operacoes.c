@@ -15,10 +15,10 @@ const char* op_to_string(Op op) {
 // Verifica se uma operação é válida
 bool is_valid(Op op, int x, int y) {
     switch (op) {
-        case ADD: return 1;
-        case SUB: return x > y;  
-        case MUL: return x != 1 && y != 1;  
-        case DIV: return y != 1 && x % y == 0;  
+        case ADD: return 1; // sempre permitido
+        case SUB: return x > y;  // evita numero negativos
+        case MUL: return x != 1 && y != 1;  // evita multiplicação por 1
+        case DIV: return y != 1 && x % y == 0;  // evita divisão por 1 e divisões não inteiras
         default: return false;
     }
 }
@@ -121,14 +121,17 @@ void find_best(int numbers[], int size, int target, BestResult* best) {
 
 
 // Resolve o problema e encontra o melhor valor possível para o alvo
-void solve(int numbers[], int count, int target) {
+int solve(int numbers[], int count, int target) {
     BestResult best = { .best_value = 0, .best_diff = 99999, .best_expr = NULL };
     find_best(numbers, count, target, &best);
     
     printf("Melhor resultado encontrado: %d (Diferença: %d)\n", best.best_value, best.best_diff);
-    printf("Expressão correspondente: ");
+    printf("Expressão final encontrada: ");
     print_expr(best.best_expr);
     printf("\n");
 
     free_expr(best.best_expr);
+    
+    return best.best_value; // Agora retorna o melhor valor encontrado
 }
+

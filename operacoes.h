@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-
+#include <math.h>
 // Definição das operações matemáticas
 typedef enum { ADD, SUB, MUL, DIV } Op;
 
@@ -32,6 +32,6 @@ void free_expr(Expr* expr);
 
 // Algoritmo de busca
 void find_best(int numbers[], int size, int target, BestResult* best);
-void solve(int numbers[], int count, int target);
+int solve(int numbers[], int count, int target);
 
 #endif // OPERACOES_H
